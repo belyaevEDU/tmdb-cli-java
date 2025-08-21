@@ -27,7 +27,7 @@ public class TMDBQueryService {
     private final Map<QueryType, String> typeToString;
     private String baseUrl = "https://api.themoviedb.org/3/movie/";
 
-    @Value("$(spring.TMDB.apiKey)")
+    @Value("${spring.TMDB.apiKey}")
     private String apiKey;
 
     private HttpClient httpClient;
@@ -52,15 +52,15 @@ public class TMDBQueryService {
                 .GET()
                 .build();
 
-        System.out.println(this.apiKey);
         return this.httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
     private Movie getMovieFromJsonObject(JsonObject jsonObject) throws ClassCastException {
         String title = jsonObject.getString("title");
         String overview = jsonObject.getString("overview");
+        String releaseDate = jsonObject.getString("release_date");
         double voteAverage = jsonObject.getJsonNumber("vote_average").doubleValue();
-        return new Movie(title, overview, voteAverage);
+        return new Movie(title, overview, releaseDate, voteAverage);
     }
 
     public ArrayList<Movie> getParsedResponse(QueryType type) {
@@ -71,6 +71,11 @@ public class TMDBQueryService {
             response = this.getResponseFromAPI(type);
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
+            return null;
+        }
+
+        if (response.statusCode() != 200) {
+            System.out.println("Bad response status code: " + response.statusCode());
             return null;
         }
 
