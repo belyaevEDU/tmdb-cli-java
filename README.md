@@ -10,7 +10,7 @@ Simple command line interface fetching data from The Movie Database (TMDB) and d
 
 - Go into the folder with the project and run:
 
-`./mvnw clean install
+`./mvnw clean install`
 
+`./mvnw spring-boot:run`
 
-./mvnw spring-boot:run`
