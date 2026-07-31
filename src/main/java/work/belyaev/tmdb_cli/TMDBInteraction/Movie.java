@@ -1,4 +1,4 @@
-package xyz.mediagenic.tmdb_cli.TMDBInteraction;
+package work.belyaev.tmdb_cli.TMDBInteraction;
 
 public record Movie(
         String title,

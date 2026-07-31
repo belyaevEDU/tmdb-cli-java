@@ -1,4 +1,4 @@
-package xyz.mediagenic.tmdb_cli.TMDBInteraction;
+package work.belyaev.tmdb_cli.TMDBInteraction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

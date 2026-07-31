@@ -1,10 +1,10 @@
-package xyz.mediagenic.tmdb_cli.CLI;
+package work.belyaev.tmdb_cli.CLI;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.mediagenic.tmdb_cli.TMDBInteraction.Movie;
-import xyz.mediagenic.tmdb_cli.TMDBInteraction.QueryType;
-import xyz.mediagenic.tmdb_cli.TMDBInteraction.TMDBQueryService;
+import work.belyaev.tmdb_cli.TMDBInteraction.Movie;
+import work.belyaev.tmdb_cli.TMDBInteraction.QueryType;
+import work.belyaev.tmdb_cli.TMDBInteraction.TMDBQueryService;
 
 import java.util.ArrayList;
 import java.util.HashMap;

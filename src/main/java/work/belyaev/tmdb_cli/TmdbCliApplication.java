@@ -1,10 +1,10 @@
-package xyz.mediagenic.tmdb_cli;
+package work.belyaev.tmdb_cli;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import xyz.mediagenic.tmdb_cli.CLI.CliService;
+import work.belyaev.tmdb_cli.CLI.CliService;
 
 import java.util.Scanner;
 

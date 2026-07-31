@@ -7,7 +7,7 @@ https://roadmap.sh/projects/tmdb-cli
 ## How to run
 - To run the app, git clone it:
 
-`git clone https://github.com/Mediagenic/TMDB-Cli.git`
+`git clone https://github.com/belyaevEDU/tmdb-cli-java.git`
 
 - Go into the folder with the project and run:
 
